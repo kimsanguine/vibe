@@ -1,0 +1,21 @@
+{
+  "autosave": {
+    "outputDir": "./downloads",
+    "filenameTemplate": "{title}_{videoId}",
+    "quality": "highest",
+    "format": "mp4",
+    "maxConcurrent": 3,
+    "retryCount": 3,
+    "retryDelay": 1000,
+    "skipExisting": true,
+    "saveMetadata": true,
+    "saveThumbnail": false,
+    "progressInterval": 500
+  },
+  "hooks": {
+    "enabled": true,
+    "timeout": 30000,
+    "maxRetries": 3,
+    "continueOnError": true
+  }
+}

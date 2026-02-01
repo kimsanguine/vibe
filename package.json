@@ -1,0 +1,30 @@
+{
+  "name": "vibe",
+  "version": "1.0.0",
+  "description": "YouTube autosave with hooks system",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "youtube",
+    "autosave",
+    "hooks"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ytdl-core": "^4.11.5",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
