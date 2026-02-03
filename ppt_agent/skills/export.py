@@ -33,12 +33,12 @@ class ExportSkill:
         try:
             from pptx import Presentation as PptxPresentation
             from pptx.util import Inches, Pt
-            from pptx.dml.color import RgbColor
+            from pptx.dml.color import RGBColor
             from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
             self._pptx = PptxPresentation
             self._Inches = Inches
             self._Pt = Pt
-            self._RgbColor = RgbColor
+            self._RGBColor = RGBColor
             self._PP_ALIGN = PP_ALIGN
             self._MSO_ANCHOR = MSO_ANCHOR
         except ImportError:
@@ -51,7 +51,7 @@ class ExportSkill:
 
     def _apply_design_to_shape(self, shape, design: DesignSystem, is_title: bool = False):
         """Shape에 디자인 적용"""
-        from pptx.dml.color import RgbColor
+        from pptx.dml.color import RGBColor
 
         if hasattr(shape, "text_frame"):
             for paragraph in shape.text_frame.paragraphs:
@@ -61,7 +61,7 @@ class ExportSkill:
 
                     # 텍스트 색상
                     rgb = self._hex_to_rgb(design.text_color)
-                    run.font.color.rgb = RgbColor(*rgb)
+                    run.font.color.rgb = RGBColor(*rgb)
 
     def _create_title_slide(self, prs, slide: Slide, design: DesignSystem):
         """타이틀 슬라이드 생성"""
@@ -69,12 +69,12 @@ class ExportSkill:
         pptx_slide = prs.slides.add_slide(slide_layout)
 
         # 배경색 설정
-        from pptx.dml.color import RgbColor
+        from pptx.dml.color import RGBColor
         background = pptx_slide.background
         fill = background.fill
         fill.solid()
         rgb = self._hex_to_rgb(design.primary_color)
-        fill.fore_color.rgb = RgbColor(*rgb)
+        fill.fore_color.rgb = RGBColor(*rgb)
 
         # 제목
         left = self._Inches(1)
@@ -91,7 +91,7 @@ class ExportSkill:
         p.font.name = design.font_title
         p.font.size = self._Pt(44)
         p.font.bold = True
-        p.font.color.rgb = RgbColor(255, 255, 255)  # 흰색
+        p.font.color.rgb = RGBColor(255, 255, 255)  # 흰색
         p.alignment = self._PP_ALIGN.CENTER
 
         # 부제목 (body가 있는 경우)
@@ -103,14 +103,14 @@ class ExportSkill:
             sp.text = slide.content.body[0]
             sp.font.name = design.font_body
             sp.font.size = self._Pt(24)
-            sp.font.color.rgb = RgbColor(255, 255, 255)
+            sp.font.color.rgb = RGBColor(255, 255, 255)
             sp.alignment = self._PP_ALIGN.CENTER
 
         return pptx_slide
 
     def _create_content_slide(self, prs, slide: Slide, design: DesignSystem):
         """콘텐츠 슬라이드 생성"""
-        from pptx.dml.color import RgbColor
+        from pptx.dml.color import RGBColor
 
         slide_layout = prs.slide_layouts[6]  # 빈 레이아웃
         pptx_slide = prs.slides.add_slide(slide_layout)
@@ -129,7 +129,7 @@ class ExportSkill:
         p.font.size = self._Pt(32)
         p.font.bold = True
         rgb = self._hex_to_rgb(design.primary_color)
-        p.font.color.rgb = RgbColor(*rgb)
+        p.font.color.rgb = RGBColor(*rgb)
 
         # 본문 내용
         content_top = self._Inches(1.8)
@@ -150,7 +150,7 @@ class ExportSkill:
             cp.font.size = self._Pt(18)
             cp.space_after = self._Pt(12)
             rgb = self._hex_to_rgb(design.text_color)
-            cp.font.color.rgb = RgbColor(*rgb)
+            cp.font.color.rgb = RGBColor(*rgb)
 
         # 노트 추가
         if slide.content.notes:
@@ -161,7 +161,7 @@ class ExportSkill:
 
     def _create_section_slide(self, prs, slide: Slide, design: DesignSystem):
         """섹션 구분 슬라이드 생성"""
-        from pptx.dml.color import RgbColor
+        from pptx.dml.color import RGBColor
 
         slide_layout = prs.slide_layouts[6]
         pptx_slide = prs.slides.add_slide(slide_layout)
@@ -171,7 +171,7 @@ class ExportSkill:
         fill = background.fill
         fill.solid()
         rgb = self._hex_to_rgb(design.secondary_color)
-        fill.fore_color.rgb = RgbColor(*rgb)
+        fill.fore_color.rgb = RGBColor(*rgb)
 
         # 섹션 제목
         left = self._Inches(1)
@@ -186,14 +186,14 @@ class ExportSkill:
         p.font.name = design.font_title
         p.font.size = self._Pt(40)
         p.font.bold = True
-        p.font.color.rgb = RgbColor(255, 255, 255)
+        p.font.color.rgb = RGBColor(255, 255, 255)
         p.alignment = self._PP_ALIGN.CENTER
 
         return pptx_slide
 
     def _create_conclusion_slide(self, prs, slide: Slide, design: DesignSystem):
         """결론 슬라이드 생성"""
-        from pptx.dml.color import RgbColor
+        from pptx.dml.color import RGBColor
 
         slide_layout = prs.slide_layouts[6]
         pptx_slide = prs.slides.add_slide(slide_layout)
@@ -212,7 +212,7 @@ class ExportSkill:
         p.font.size = self._Pt(32)
         p.font.bold = True
         rgb = self._hex_to_rgb(design.primary_color)
-        p.font.color.rgb = RgbColor(*rgb)
+        p.font.color.rgb = RGBColor(*rgb)
 
         # 핵심 요약
         content_top = self._Inches(2)
@@ -232,7 +232,7 @@ class ExportSkill:
             cp.font.bold = True
             cp.space_after = self._Pt(16)
             rgb = self._hex_to_rgb(design.text_color)
-            cp.font.color.rgb = RgbColor(*rgb)
+            cp.font.color.rgb = RGBColor(*rgb)
 
         return pptx_slide
 
