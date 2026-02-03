@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Trends 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a0a0f;
+    }
+
+    .slide {
+      width: 720pt;
+      height: 405pt;
+      padding: 40pt;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      margin-bottom: 20pt;
+    }
+
+    /* Color Palette - Tech Futuristic */
+    :root {
+      --primary: #0a0a0f;
+      --secondary: #1a1a2e;
+      --accent-cyan: #00d4ff;
+      --accent-purple: #7b2cbf;
+      --text-white: #ffffff;
+      --text-gray: #b0b0b0;
+    }
+
+    /* Slide 1: Title */
+    .slide-title {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .slide-title h1 {
+      font-size: 72pt;
+      color: #00d4ff;
+      font-weight: bold;
+      margin-bottom: 20pt;
+      text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    }
+
+    .slide-title h2 {
+      font-size: 28pt;
+      color: #ffffff;
+      font-weight: normal;
+      margin-bottom: 40pt;
+    }
+
+    .slide-title p {
+      font-size: 16pt;
+      color: #b0b0b0;
+    }
+
+    /* Slide 2-9: Content Slides */
+    .slide-content {
+      background: #0a0a0f;
+    }
+
+    .slide-content h1 {
+      font-size: 36pt;
+      color: #00d4ff;
+      margin-bottom: 30pt;
+      padding-bottom: 15pt;
+      border-bottom: 3pt solid #7b2cbf;
+    }
+
+    .slide-content h2 {
+      font-size: 24pt;
+      color: #ffffff;
+      margin-bottom: 20pt;
+    }
+
+    .slide-content p {
+      font-size: 20pt;
+      color: #ffffff;
+      line-height: 1.6;
+      margin-bottom: 15pt;
+    }
+
+    .slide-content ul {
+      margin-left: 30pt;
+    }
+
+    .slide-content li {
+      font-size: 20pt;
+      color: #ffffff;
+      line-height: 1.8;
+      margin-bottom: 12pt;
+    }
+
+    /* Cards */
+    .card {
+      background: #1a1a2e;
+      border-radius: 10pt;
+      padding: 20pt;
+      margin-bottom: 15pt;
+      border-left: 4pt solid #00d4ff;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    /* Data Grid */
+    .data-grid {
+      display: flex;
+      gap: 20pt;
+      margin-top: 20pt;
+    }
+
+    .data-box {
+      flex: 1;
+      background: #1a1a2e;
+      border-radius: 10pt;
+      padding: 25pt;
+      text-align: center;
+      border-top: 4pt solid #7b2cbf;
+    }
+
+    .data-box h2 {
+      font-size: 36pt;
+      color: #00d4ff;
+      margin-bottom: 10pt;
+    }
+
+    .data-box p {
+      font-size: 14pt;
+      color: #b0b0b0;
+    }
+
+    /* Trend Number */
+    .trend-num {
+      position: absolute;
+      top: 40pt;
+      right: 40pt;
+      font-size: 80pt;
+      color: rgba(0, 212, 255, 0.1);
+      font-weight: bold;
+    }
+
+    /* Two Column Layout */
+    .two-col {
+      display: flex;
+      gap: 30pt;
+      margin-top: 20pt;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    /* Highlight Text */
+    .highlight {
+      color: #00d4ff;
+      font-weight: bold;
+    }
+
+    /* Thank You Slide */
+    .slide-thanks {
+      background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .slide-thanks h1 {
+      font-size: 60pt;
+      color: #00d4ff;
+      margin-bottom: 30pt;
+    }
+
+    .slide-thanks p {
+      font-size: 18pt;
+      color: #b0b0b0;
+      margin-bottom: 10pt;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1: Title -->
+  <div class="slide slide-title" id="slide-1">
+    <h1>AI Trends 2026</h1>
+    <h2>The New Era of Artificial Intelligence</h2>
+    <p>PPT Agent Team | February 2026</p>
+  </div>
+
+  <!-- Slide 2: Agenda -->
+  <div class="slide slide-content" id="slide-2">
+    <h1>Agenda</h1>
+    <ul>
+      <li>AI Market Overview</li>
+      <li>5 Key Trends for 2026</li>
+      <li>Key Takeaways</li>
+    </ul>
+  </div>
+
+  <!-- Slide 3: Market Size -->
+  <div class="slide slide-content" id="slide-3">
+    <h1>AI Market Size</h1>
+    <div class="data-grid">
+      <div class="data-box">
+        <h2>$294B</h2>
+        <p>2025 Market Size</p>
+      </div>
+      <div class="data-box">
+        <h2>$375B</h2>
+        <p>2026 Projected</p>
+      </div>
+      <div class="data-box">
+        <h2>$3.5T</h2>
+        <p>2034 Forecast</p>
+      </div>
+      <div class="data-box">
+        <h2>30%+</h2>
+        <p>Annual CAGR</p>
+      </div>
+    </div>
+    <p style="margin-top: 30pt; font-size: 16pt; color: #b0b0b0;">
+      Source: Fortune Business Insights, Statista, Grand View Research
+    </p>
+  </div>
+
+  <!-- Slide 4: Trend 1 - Agentic AI -->
+  <div class="slide slide-content" id="slide-4">
+    <h1>Trend 1: Agentic AI</h1>
+    <p class="trend-num">01</p>
+    <div class="card">
+      <p><span class="highlight">40%</span> of enterprise apps will use AI agents by 2026</p>
+    </div>
+    <ul>
+      <li>Autonomous systems for Finance, HR, Customer Support</li>
+      <li>Minimal human intervention in decision-making</li>
+      <li>Intelligent supply chain orchestration</li>
+      <li>Data interpretation and system access</li>
+    </ul>
+    <p style="margin-top: 20pt; font-size: 14pt; color: #7b2cbf;">Source: Gartner Predictions 2026</p>
+  </div>
+
+  <!-- Slide 5: Trend 2 - On-Device AI -->
+  <div class="slide slide-content" id="slide-5">
+    <h1>Trend 2: On-Device AI</h1>
+    <p class="trend-num">02</p>
+    <div class="two-col">
+      <div class="col">
+        <div class="card">
+          <p><span class="highlight">Edge Intelligence</span> goes mainstream</p>
+        </div>
+        <ul>
+          <li>Mobile AI experiences</li>
+          <li>IoT applications</li>
+          <li>Privacy-critical systems</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="card">
+          <p><span class="highlight">No Cloud</span> dependency</p>
+        </div>
+        <ul>
+          <li>Efficient model design</li>
+          <li>Hardware acceleration</li>
+          <li>Real-time processing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6: Trend 3 - AI as Partner -->
+  <div class="slide slide-content" id="slide-6">
+    <h1>Trend 3: AI as Partner</h1>
+    <p class="trend-num">03</p>
+    <div class="card">
+      <p>AI evolves from <span class="highlight">instrument</span> to <span class="highlight">collaborative partner</span></p>
+    </div>
+    <ul>
+      <li>Amplifies human expertise</li>
+      <li>Collaborates in creation and problem-solving</li>
+      <li>Transforms how we work</li>
+      <li>Beyond answering questions</li>
+    </ul>
+    <p style="margin-top: 20pt; font-size: 14pt; color: #7b2cbf;">Source: Microsoft AI Research</p>
+  </div>
+
+  <!-- Slide 7: Trend 4 - Quantum Computing -->
+  <div class="slide slide-content" id="slide-7">
+    <h1>Trend 4: Quantum Leap</h1>
+    <p class="trend-num">04</p>
+    <div class="card">
+      <p>IBM: Quantum computers will <span class="highlight">outperform</span> classical computers in 2026</p>
+    </div>
+    <h2>Breakthrough Areas:</h2>
+    <ul>
+      <li>Drug development</li>
+      <li>Materials science</li>
+      <li>Financial optimization</li>
+      <li>Complex simulations</li>
+    </ul>
+  </div>
+
+  <!-- Slide 8: Trend 5 - Global AI Race -->
+  <div class="slide slide-content" id="slide-8">
+    <h1>Trend 5: Global AI Race</h1>
+    <p class="trend-num">05</p>
+    <div class="two-col">
+      <div class="col">
+        <div class="card">
+          <p><span class="highlight">China</span> Open Source Rise</p>
+        </div>
+        <ul>
+          <li>Open source AI adoption</li>
+          <li>Global AI community goodwill</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="card">
+          <p>Tech Gap: <span class="highlight">Months → Weeks</span></p>
+        </div>
+        <ul>
+          <li>Silicon Valley adopting Chinese models</li>
+          <li>Rapid innovation cycle</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9: Key Takeaways -->
+  <div class="slide slide-content" id="slide-9">
+    <h1>Key Takeaways</h1>
+    <div class="data-grid" style="flex-wrap: wrap;">
+      <div class="data-box" style="flex: 0 0 45%;">
+        <h2 style="font-size: 24pt;">30%+</h2>
+        <p>Annual AI Market Growth</p>
+      </div>
+      <div class="data-box" style="flex: 0 0 45%;">
+        <h2 style="font-size: 24pt;">Agentic AI</h2>
+        <p>Drives Enterprise Innovation</p>
+      </div>
+      <div class="data-box" style="flex: 0 0 45%;">
+        <h2 style="font-size: 24pt;">On-Device</h2>
+        <p>Enhanced Privacy</p>
+      </div>
+      <div class="data-box" style="flex: 0 0 45%;">
+        <h2 style="font-size: 24pt;">Global Race</h2>
+        <p>Intensifying Competition</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10: Thank You -->
+  <div class="slide slide-thanks" id="slide-10">
+    <h1>Thank You</h1>
+    <p>AI Trends 2026 Presentation</p>
+    <p>Created by PPT Agent Team</p>
+    <p style="margin-top: 30pt; font-size: 14pt;">
+      Sources: Microsoft, MIT Tech Review, IBM, Gartner, Statista
+    </p>
+  </div>
+
+</body>
+</html>
