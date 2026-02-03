@@ -1,254 +1,456 @@
-# Design Skill (프리젠테이션 디자인 스킬)
+# Design Skill (프리젠테이션 디자인 스킬) v2.0
 
-프론트엔드 디자인 원칙을 활용하여 멋지고 과감한 비즈니스 프리젠테이션을 디자인하는 스킬입니다.
+Gemini 스타일과 모던 프론트엔드 디자인 원칙을 결합한 세련된 프리젠테이션 디자인 시스템입니다.
 
 ## 핵심 철학
 
-> "평범함을 거부하고, 기억에 남는 시각적 경험을 창조하라"
+> "Energy flows through gradients, meaning crystallizes in simplicity"
+> 에너지는 그라데이션을 통해 흐르고, 의미는 단순함 속에서 결정화된다.
 
-프리젠테이션은 단순한 정보 전달이 아닌, 청중의 마음을 움직이는 시각적 스토리텔링입니다.
+프리젠테이션은 **시각적 에너지**를 전달하는 매체입니다. 정보를 전달하는 것이 아니라, 청중의 감정과 이성을 동시에 움직이는 경험을 설계합니다.
 
-## 디자인 원칙
+---
 
-### 1. 대담한 시각적 방향 설정
+## 1. 디자인 원칙
 
-코딩 전에 먼저 미적 방향을 수립합니다:
+### 1.1 Gradient-First Design (그라데이션 우선)
 
-- **목적과 청중 분석**: 누구에게, 무엇을 전달할 것인가
-- **톤 결정**: 미니멀리스트, 맥시멀리스트, 레트로, 럭셔리, 테크, 친근함 등
-- **차별화 포인트**: 기억에 남을 하나의 특징
-
-### 2. 피해야 할 것들 (Avoid)
+Gemini 디자인 철학의 핵심: 그라데이션은 **에너지와 방향성**을 전달합니다.
 
 ```
-❌ 평범한 폰트 (Arial, Inter, Roboto)
-❌ 흔한 색상 조합 (파란색 그라데이션, 무채색 일변도)
-❌ 예측 가능한 레이아웃 (중앙 정렬 일변도)
-❌ 문맥 없이 반복되는 템플릿
-❌ 과도한 텍스트 (텍스트 벽)
+그라데이션 규칙:
+├── 날카로운 시작점 → 부드러운 확산
+├── 방향성으로 시선 유도
+├── 감정적 톤 설정 (따뜻함, 차가움, 역동성)
+└── 배경보다 '분위기'로 활용
 ```
 
-### 3. 추구해야 할 것들 (Embrace)
+**그라데이션 유형:**
 
-```
-✅ 독특한 타이포그래피 조합 (세리프 + 산세리프 페어링)
-✅ 응집력 있는 색상 시스템 (주요색 + 강조색)
-✅ 고임팩트 애니메이션과 마이크로 인터랙션
-✅ 예상치 못한 공간 구성 (비대칭, 오버랩, 그리드 파괴)
-✅ 대기감 있는 시각적 디테일과 텍스처
-```
+| 유형 | 용도 | 예시 |
+|------|------|------|
+| Linear | 방향성, 진행감 | 타이틀, 섹션 구분 |
+| Radial | 집중, 강조 | 데이터 포인트, CTA |
+| Conic | 순환, 완성 | 프로세스, 사이클 |
+| Mesh | 복잡한 감정 | 배경, 오버레이 |
 
-## 색상 팔레트 가이드
+### 1.2 Circular Form Language (원형 형태 언어)
 
-### 비즈니스 프리젠테이션용 추천 팔레트
+원은 **단순함, 조화, 편안함**을 전달합니다.
 
-#### 1. 모던 프로페셔널
 ```css
---primary: #1a1a2e;      /* 딥 네이비 */
---secondary: #16213e;    /* 다크 블루 */
---accent: #e94560;       /* 코랄 레드 */
---background: #f5f5f5;   /* 라이트 그레이 */
---text: #0f0f0f;         /* 블랙 */
+/* 모든 요소에 일관된 둥근 모서리 */
+--radius-sm: 8px;    /* 버튼, 태그 */
+--radius-md: 16px;   /* 카드, 컨테이너 */
+--radius-lg: 24px;   /* 섹션, 모달 */
+--radius-full: 50%;  /* 아이콘, 아바타 */
 ```
 
-#### 2. 대담한 혁신
+### 1.3 Warm Spatial Quality (따뜻한 공간감)
+
+> "Optimistic, delightful, playful, yet sophisticated"
+> — Google Design Team
+
+- **넉넉한 여백**: 요소 간 숨 쉴 공간
+- **레이어링**: 부드러운 그림자로 깊이감
+- **부유하는 요소**: 배경과 분리된 카드
+
+---
+
+## 2. 색상 시스템
+
+### 2.1 Gemini-Inspired Palette
+
 ```css
---primary: #ff6b35;      /* 오렌지 */
---secondary: #004e89;    /* 딥 블루 */
---accent: #fcbf49;       /* 골드 */
---background: #ffffff;   /* 화이트 */
---text: #1a1a1a;         /* 다크 그레이 */
+/* Primary Gradient - Google Colors */
+--gradient-gemini: linear-gradient(
+  135deg,
+  #4285F4 0%,    /* Google Blue */
+  #9B72CB 25%,   /* Purple */
+  #D96570 50%,   /* Red-Pink */
+  #F9AB00 75%,  /* Yellow */
+  #0F9D58 100%   /* Green */
+);
+
+/* Simplified for Presentation */
+--gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+--gradient-warm: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+--gradient-cool: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+--gradient-sunset: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+--gradient-ocean: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 ```
 
-#### 3. 럭셔리 미니멀
+### 2.2 Professional Palettes
+
+#### Palette A: Modern Clarity
 ```css
---primary: #2d2d2d;      /* 차콜 */
---secondary: #a68a64;    /* 골드 브론즈 */
---accent: #ffffff;       /* 화이트 */
---background: #f8f6f0;   /* 오프 화이트 */
---text: #1a1a1a;         /* 블랙 */
+--surface: #FFFFFF;
+--surface-elevated: #F8FAFC;
+--text-primary: #0F172A;
+--text-secondary: #64748B;
+--accent-primary: #6366F1;    /* Indigo */
+--accent-secondary: #EC4899;  /* Pink */
+--border: rgba(0, 0, 0, 0.06);
 ```
 
-#### 4. 테크 퓨처리스틱
+#### Palette B: Dark Sophistication
 ```css
---primary: #0a0a0f;      /* 매트 블랙 */
---secondary: #00d4ff;    /* 사이안 */
---accent: #7b2cbf;       /* 일렉트릭 퍼플 */
---background: #121212;   /* 다크 */
---text: #ffffff;         /* 화이트 */
+--surface: #0F0F14;
+--surface-elevated: #1A1A24;
+--text-primary: #FFFFFF;
+--text-secondary: #A1A1AA;
+--accent-primary: #A78BFA;    /* Violet */
+--accent-secondary: #22D3EE;  /* Cyan */
+--border: rgba(255, 255, 255, 0.08);
 ```
 
-#### 5. 자연 친화적
+#### Palette C: Warm Professional
 ```css
---primary: #2d5a27;      /* 포레스트 그린 */
---secondary: #8fbc8f;    /* 세이지 */
---accent: #f4a460;       /* 샌디 브라운 */
---background: #faf8f5;   /* 크림 */
---text: #333333;         /* 다크 그레이 */
+--surface: #FFFBF5;
+--surface-elevated: #FFFFFF;
+--text-primary: #1C1917;
+--text-secondary: #78716C;
+--accent-primary: #EA580C;    /* Orange */
+--accent-secondary: #0891B2;  /* Teal */
+--border: rgba(0, 0, 0, 0.04);
 ```
 
-## 타이포그래피 가이드
+---
 
-### 폰트 페어링 추천
+## 3. 타이포그래피
 
-#### 1. 모던 비즈니스
-- **제목**: Playfair Display (Serif)
-- **본문**: Source Sans Pro (Sans-serif)
+### 3.1 폰트 선택 원칙
 
-#### 2. 테크 스타트업
-- **제목**: Space Grotesk (Sans-serif)
-- **본문**: IBM Plex Sans (Sans-serif)
-
-#### 3. 크리에이티브
-- **제목**: Bebas Neue (Display)
-- **본문**: Lato (Sans-serif)
-
-#### 4. 엘레강스
-- **제목**: Cormorant Garamond (Serif)
-- **본문**: Montserrat (Sans-serif)
-
-### 타이포그래피 스케일
 ```
-타이틀:     72-96px (굵게)
-섹션 제목:  48-64px
-슬라이드 제목: 36-48px
-본문:       24-32px
-캡션:       16-20px
+❌ AVOID (절대 사용 금지)
+├── Arial, Helvetica (너무 평범)
+├── Inter (AI 미학의 클리셰)
+├── Space Grotesk (과도하게 사용됨)
+└── Roboto (Google 기본값 느낌)
+
+✅ EMBRACE (권장)
+├── 개성 있는 디스플레이 폰트
+├── 특색 있는 세리프
+└── 브랜드 연관 폰트
 ```
 
-## 레이아웃 패턴
+### 3.2 추천 폰트 페어링
 
-### 1. 비대칭 그리드
+#### Pairing 1: Elegant Authority
 ```
-┌─────────────────────────────┐
-│ ██████████████              │
-│ ██████████████    ████████  │
-│                   ████████  │
-│      ████████████████████   │
-└─────────────────────────────┘
+Display: Fraunces (Variable, Serif)
+Body: Plus Jakarta Sans
+특징: 권위 있으면서도 친근함
 ```
 
-### 2. 대각선 분할
+#### Pairing 2: Modern Edge
 ```
-┌─────────────────────────────┐
-│ ████████████               /│
-│ ████████████             /  │
-│ ████████████           /    │
-│                      /      │
-└─────────────────────────────┘
+Display: Syne (Sans-serif, Bold)
+Body: Satoshi
+특징: 현대적이고 날카로움
 ```
 
-### 3. 오버래핑 요소
+#### Pairing 3: Refined Classic
 ```
-┌─────────────────────────────┐
-│                             │
-│    ┌──────────┐             │
-│    │ ████████ ├────────┐    │
-│    │ ████████ │ 텍스트  │    │
-│    └──────────┴────────┘    │
-└─────────────────────────────┘
+Display: Libre Baskerville
+Body: DM Sans
+특징: 클래식하지만 세련됨
 ```
 
-### 4. 풀블리드 이미지 + 텍스트 오버레이
+#### Pairing 4: Tech Forward (한글 지원)
 ```
-┌─────────────────────────────┐
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│ ░░░░  핵심 메시지  ░░░░░░░░░ │
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-└─────────────────────────────┘
+Display: Pretendard (Black)
+Body: Pretendard (Regular)
+특징: 한글 완벽 지원, 현대적
 ```
 
-## 슬라이드 타입별 디자인 가이드
+### 3.3 Type Scale
 
-### 1. 타이틀 슬라이드
-- 대담한 타이포그래피가 중심
-- 미니멀한 요소
-- 브랜드 아이덴티티 반영
-- 강렬한 첫인상
-
-### 2. 섹션 구분 슬라이드
-- 색상 반전 또는 강조색 활용
-- 숫자나 아이콘으로 진행 표시
-- 시각적 휴식 제공
-
-### 3. 콘텐츠 슬라이드
-- 40/60 또는 50/50 분할
-- 시각 자료와 텍스트 균형
-- 충분한 여백
-
-### 4. 데이터 슬라이드
-- 차트가 스타가 되도록
-- 불필요한 장식 제거
-- 데이터 포인트 강조
-- 출처 작게 표기
-
-### 5. 인용구 슬라이드
-- 큰 따옴표 디자인 요소
-- 화자 정보 하단에
-- 여백을 두려워하지 말 것
-
-### 6. 마무리 슬라이드
-- CTA(Call to Action) 명확히
-- 연락처 정보
-- 기억에 남는 마무리 이미지
-
-## 애니메이션 가이드라인
-
-### 권장 애니메이션
 ```
-- Fade In (페이드 인): 자연스러운 등장
-- Slide In (슬라이드 인): 방향성 있는 움직임
-- Scale (스케일): 강조 효과
-- Morph (모프): 슬라이드 간 부드러운 전환
+--text-hero: clamp(48px, 8vw, 96px);     /* 히어로 타이틀 */
+--text-display: clamp(36px, 5vw, 64px);  /* 슬라이드 제목 */
+--text-heading: clamp(24px, 3vw, 36px);  /* 섹션 제목 */
+--text-body: clamp(18px, 2vw, 24px);     /* 본문 */
+--text-caption: clamp(12px, 1.5vw, 16px); /* 캡션 */
 ```
 
-### 피해야 할 애니메이션
+---
+
+## 4. 레이아웃 시스템
+
+### 4.1 Grid System
+
 ```
-- Bounce (바운스): 비즈니스에 부적합
-- Spin (회전): 어지러움 유발
-- 과도한 3D 효과: 산만함
-- 랜덤 전환: 일관성 부족
+16:9 Slide (1920x1080)
+├── Margin: 80px (좌우), 60px (상하)
+├── Gutter: 32px
+├── Columns: 12
+└── Safe Zone: 1760 x 960
 ```
 
-## 실행 체크리스트
+### 4.2 레이아웃 패턴
+
+#### Pattern A: Hero Statement
+```
+┌────────────────────────────────────┐
+│                                    │
+│     ╔════════════════════════╗     │
+│     ║   ONE POWERFUL         ║     │
+│     ║   STATEMENT HERE       ║     │
+│     ╚════════════════════════╝     │
+│                                    │
+│              ○ ○ ○                 │
+└────────────────────────────────────┘
+중앙 집중, 최대 임팩트
+```
+
+#### Pattern B: Asymmetric Split (60/40)
+```
+┌────────────────────────────────────┐
+│ ┌─────────────────┐  ┌──────────┐  │
+│ │                 │  │ ▪ Point  │  │
+│ │   BIG VISUAL    │  │ ▪ Point  │  │
+│ │   OR METRIC     │  │ ▪ Point  │  │
+│ │                 │  │          │  │
+│ └─────────────────┘  └──────────┘  │
+└────────────────────────────────────┘
+시각 자료 강조 + 핵심 포인트
+```
+
+#### Pattern C: Card Grid
+```
+┌────────────────────────────────────┐
+│  Title                             │
+│  ┌────────┐ ┌────────┐ ┌────────┐  │
+│  │ ╭────╮ │ │ ╭────╮ │ │ ╭────╮ │  │
+│  │ │ 01 │ │ │ │ 02 │ │ │ │ 03 │ │  │
+│  │ ╰────╯ │ │ ╰────╯ │ │ ╰────╯ │  │
+│  │  Text  │ │  Text  │ │  Text  │  │
+│  └────────┘ └────────┘ └────────┘  │
+└────────────────────────────────────┘
+둥근 카드, 부유하는 느낌
+```
+
+#### Pattern D: Data Focus
+```
+┌────────────────────────────────────┐
+│  Context Label                     │
+│  ┌─────────────────────────────┐   │
+│  │         ╭───────╮           │   │
+│  │         │ 87%   │           │   │
+│  │         ╰───────╯           │   │
+│  │    ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬       │   │
+│  └─────────────────────────────┘   │
+│  Source: Citation                  │
+└────────────────────────────────────┘
+데이터가 주인공
+```
+
+---
+
+## 5. 시각적 요소
+
+### 5.1 그림자 시스템
+
+```css
+/* Layered Shadow - 부드러운 깊이감 */
+--shadow-sm:
+  0 1px 2px rgba(0,0,0,0.04),
+  0 2px 4px rgba(0,0,0,0.04);
+
+--shadow-md:
+  0 4px 6px rgba(0,0,0,0.04),
+  0 10px 15px rgba(0,0,0,0.06);
+
+--shadow-lg:
+  0 10px 25px rgba(0,0,0,0.06),
+  0 20px 48px rgba(0,0,0,0.08);
+
+/* Colored Glow - 그라데이션과 어울리는 글로우 */
+--glow-primary: 0 0 40px rgba(99, 102, 241, 0.3);
+--glow-accent: 0 0 40px rgba(236, 72, 153, 0.3);
+```
+
+### 5.2 아이콘 스타일
+
+```
+권장 스타일:
+├── Phosphor Icons (Duotone)
+├── Lucide Icons (Stroke)
+├── Heroicons (Outline)
+└── Custom geometric shapes
+
+아이콘 크기:
+├── Inline: 20-24px
+├── Card: 32-48px
+├── Hero: 64-96px
+└── Decorative: 128px+
+```
+
+### 5.3 이미지 처리
+
+```css
+/* 이미지 오버레이 */
+.image-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+/* 이미지 마스킹 */
+.image-masked {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* 소프트 블러 배경 */
+.image-bg-blur {
+  filter: blur(60px);
+  opacity: 0.6;
+}
+```
+
+---
+
+## 6. 슬라이드 타입별 템플릿
+
+### 6.1 타이틀 슬라이드
+
+```
+배경: Gradient mesh 또는 단색 + 글로우
+제목: Hero 사이즈, 중앙 또는 좌하단
+부제: Secondary 색상, 30% 작게
+로고/날짜: 모서리에 작게
+```
+
+### 6.2 어젠다 슬라이드
+
+```
+배경: 밝은 단색
+제목: 좌상단
+항목: 번호 + 텍스트, 수직 배열
+강조: 그라데이션 번호 또는 아이콘
+```
+
+### 6.3 데이터 슬라이드
+
+```
+배경: 밝은 단색
+숫자: 초대형, 그라데이션 또는 액센트
+라벨: 숫자 아래, 설명적
+출처: 하단, 작게
+```
+
+### 6.4 비교 슬라이드
+
+```
+배경: 두 영역으로 분할 (색상 대비)
+왼쪽: Before / 문제 / A안
+오른쪽: After / 해결 / B안
+중앙: 구분선 또는 VS
+```
+
+### 6.5 인용구 슬라이드
+
+```
+배경: 단색 또는 그라데이션
+인용구: 중앙, 대형 따옴표
+출처: 하단 우측, 작게
+```
+
+### 6.6 Thank You 슬라이드
+
+```
+배경: Gradient (Brand colors)
+제목: "Thank You" 또는 CTA
+연락처: 하단 중앙
+로고: 중앙 또는 하단
+```
+
+---
+
+## 7. 애니메이션
+
+### 7.1 권장 전환
+
+```css
+/* Fade + Rise */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Reveal */
+.item:nth-child(1) { animation-delay: 0ms; }
+.item:nth-child(2) { animation-delay: 100ms; }
+.item:nth-child(3) { animation-delay: 200ms; }
+
+/* Timing */
+--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+--duration-fast: 200ms;
+--duration-normal: 400ms;
+--duration-slow: 600ms;
+```
+
+### 7.2 마이크로 인터랙션
+
+```
+버튼 호버: Scale 1.02 + Shadow 증가
+카드 호버: Y -4px + Shadow 증가
+링크 호버: 밑줄 애니메이션
+숫자: 카운트업 애니메이션
+```
+
+---
+
+## 8. 디자인 QA 체크리스트
 
 ```markdown
-## 디자인 시작 전
-- [ ] 청중 분석 완료
-- [ ] 시각적 방향 결정
-- [ ] 색상 팔레트 선택
-- [ ] 폰트 페어링 결정
-- [ ] 참고 이미지 수집
+## 시각적 일관성
+- [ ] 색상 팔레트 3-4색 이내
+- [ ] 폰트 2종 이내
+- [ ] 일관된 모서리 반경
+- [ ] 일관된 그림자 사용
+- [ ] 일관된 여백 시스템
 
-## 디자인 중
-- [ ] 일관된 마진/패딩 적용
-- [ ] 그리드 시스템 준수
-- [ ] 색상 대비 확인 (접근성)
-- [ ] 텍스트 가독성 확인
-- [ ] 시각 계층 구조 점검
+## 가독성
+- [ ] 최소 대비율 4.5:1
+- [ ] 본문 18px 이상
+- [ ] 줄 간격 1.5 이상
+- [ ] 한 슬라이드 50단어 이하
 
-## 디자인 완료 후
-- [ ] 전체 슬라이드 일관성 검토
-- [ ] 애니메이션 적절성 확인
-- [ ] 다양한 화면 크기 테스트
-- [ ] 브랜드 가이드라인 준수 확인
+## 전문성
+- [ ] 그라데이션 자연스러움
+- [ ] 정렬 완벽함
+- [ ] 요소 간 관계 명확
+- [ ] 불필요한 장식 없음
+
+## 브랜드
+- [ ] 로고 배치 일관성
+- [ ] 톤앤매너 통일
+- [ ] 청중에 적합한 스타일
 ```
 
-## 출력물
+---
 
-이 스킬을 활용하면 다음을 생성합니다:
+## 9. 출력물
 
-1. **디자인 철학 문서** (design-philosophy.md)
-   - 선택한 미적 방향
-   - 색상/폰트/레이아웃 결정 근거
+이 스킬로 생성되는 파일:
 
-2. **스타일 가이드** (style-guide.md)
-   - 색상 코드
-   - 폰트 스펙
-   - 레이아웃 규칙
-   - 컴포넌트 정의
+1. **design-system.json** - 색상, 폰트, 스페이싱 토큰
+2. **slide-templates.html** - 슬라이드 타입별 HTML 템플릿
+3. **style-guide.md** - 디자인 결정 근거 문서
 
-3. **슬라이드 디자인 사양** (slide-specs.json)
-   - 각 슬라이드의 상세 디자인 스펙
-   - PPTX Skill에서 사용할 구조화된 데이터
+---
+
+## 참고 자료
+
+- [Google Gemini Visual Design](https://design.google/library/gemini-ai-visual-design)
+- [Anthropic Frontend Design Skill](https://github.com/anthropics/skills/tree/main/skills/frontend-design)
