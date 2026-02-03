@@ -88,9 +88,19 @@ print(f"생성된 파일: {output_file}")
 | Phase | 상태 | 구성요소 |
 |-------|------|----------|
 | **Phase 1** | ✅ 완료 | Orchestrator(C) + Research(C) + Export(C) |
-| Phase 2 | 🔲 예정 | Structure(C) + Design(G) 연동 |
-| Phase 3 | 🔲 예정 | Asset(G) + 시각 품질 평가(G) |
+| **Phase 2** | ✅ 완료 | Structure(C) + Design(G) 연동 + 시각 평가 |
+| Phase 3 | 🔲 예정 | Asset(G) + 이미지 생성 |
 | Phase 4 | 🔲 예정 | 전체 HITL + 한국형 템플릿 |
+
+## 워크플로우 (Phase 2)
+
+```
+[입력] → [Orchestrator/Claude] → [HITL#1: 요청 확인]
+  → [Research/Claude] → [리서치 평가]
+  → [Design/Gemini] → [HITL#2: 디자인 선택]
+  → [Structure/Claude] → [HITL#3: 구조 확인]
+  → [Visual Eval/Gemini] → [Export] → [PPTX 출력]
+```
 
 ## 프로젝트 구조
 
@@ -98,19 +108,21 @@ print(f"생성된 파일: {output_file}")
 ppt_agent/
 ├── __init__.py
 ├── config.py           # 설정 및 환경변수
-├── main.py             # 메인 실행 파일
+├── main.py             # 메인 실행 파일 (8-step workflow)
 ├── llm/
 │   ├── __init__.py
 │   ├── router.py       # LLM Router (Claude/Gemini)
 │   └── clients.py      # LLM 클라이언트
 ├── agents/
 │   ├── __init__.py
-│   ├── base.py         # Base Agent 클래스
-│   ├── orchestrator.py # Orchestrator Agent
-│   └── research.py     # Research Agent
+│   ├── base.py         # Base Agent (Glass Box 패턴)
+│   ├── orchestrator.py # Orchestrator Agent (HITL 관리)
+│   ├── research.py     # Research Agent [Claude]
+│   └── design.py       # Design Agent [Gemini]
 ├── skills/
 │   ├── __init__.py
-│   ├── structure.py    # 슬라이드 구조 생성
+│   ├── structure.py    # 슬라이드 구조 (한국형 기승전결)
+│   ├── design.py       # 디자인 시스템 (컬러/폰트/레이아웃)
 │   └── export.py       # PPTX 내보내기
 └── models/
     ├── __init__.py
