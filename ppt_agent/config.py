@@ -12,6 +12,7 @@ class LLMProvider(Enum):
     """LLM 제공자"""
     CLAUDE = "claude"
     GEMINI = "gemini"
+    MOCK = "mock"
 
 
 class TaskType(Enum):
@@ -60,6 +61,7 @@ class AgentConfig:
     max_hitl_interactions: int = 4
     output_dir: str = "./output"
     language: str = "ko"  # 한국어 기본
+    mock_mode: bool = field(default_factory=lambda: os.getenv("PPT_AGENT_MOCK", "").lower() == "true")
 
 
 # LLM 라우팅 맵

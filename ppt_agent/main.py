@@ -214,6 +214,12 @@ LLM 라우팅:
         help="HITL(Human-in-the-Loop) 비활성화"
     )
 
+    parser.add_argument(
+        "--mock",
+        action="store_true",
+        help="Mock 모드 - API 없이 테스트용 더미 데이터 사용"
+    )
+
     args = parser.parse_args()
 
     # 주제가 없으면 대화형 모드
@@ -236,7 +242,14 @@ LLM 라우팅:
 
     # PPT 생성
     try:
-        agent = PPTAgent()
+        # Mock 모드 설정
+        config = None
+        if args.mock:
+            config = get_config()
+            config.mock_mode = True
+            print("\n⚠️  Mock 모드: API 없이 테스트용 더미 데이터를 사용합니다.\n")
+
+        agent = PPTAgent(config)
 
         # HITL 비활성화 옵션
         if args.no_hitl:
