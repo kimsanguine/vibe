@@ -35,7 +35,12 @@ class LLMRouter:
             if provider == LLMProvider.CLAUDE:
                 self._clients[provider] = ClaudeClient(self.config.claude)
             elif provider == LLMProvider.GEMINI:
-                self._clients[provider] = GeminiClient(self.config.gemini)
+                # Gemini 비활성화 - Claude로 폴백
+                # (이 환경에서 google-generativeai 라이브러리 호환성 문제)
+                print(f"\n⚠️  Gemini 비활성화됨, Claude로 폴백")
+                if LLMProvider.CLAUDE not in self._clients:
+                    self._clients[LLMProvider.CLAUDE] = ClaudeClient(self.config.claude)
+                return self._clients[LLMProvider.CLAUDE]
             elif provider == LLMProvider.MOCK:
                 self._clients[provider] = MockClient()
             else:
