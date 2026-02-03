@@ -319,6 +319,23 @@ output/
 └── sources.md               # 참고 자료
 ```
 
+### 8.2 실제 출력물 예시
+
+```
+output/
+├── ai-trends-2026/          # 예제 1: AI 트렌드 2026
+│   ├── AI_Trends_2026.pptx
+│   └── v2/
+│       ├── AI_Trends_2026_v2.pptx  (220KB)
+│       └── research_report.md
+│
+└── openclaw-analysis/       # 예제 2: OpenClaw 분석 ⭐NEW
+    ├── OpenClaw_Analysis.pptx     (220KB, 10슬라이드)
+    ├── research_report.md         # 리서치 보고서
+    ├── visual_qa_report.md        # Visual QA 88점 PASS
+    └── generate-pptx.js           # 생성 스크립트
+```
+
 ### 8.2 메타데이터
 
 ```json
@@ -338,13 +355,76 @@ output/
 
 ---
 
-## 9. 로드맵
+## 9. 사례 연구: OpenClaw 분석 프리젠테이션
+
+### 9.1 요청 사항
+
+```
+"OpenClaw에 대한 분석과 인사이트를 10분 프리젠테이션으로 만들어줘.
+ 청중은 AI 관심사가 높은 임원들이고, 20년 이상의 AI 프로덕트 리더로서 작성해줘"
+```
+
+### 9.2 실행 결과
+
+| 항목 | 결과 |
+|------|------|
+| 슬라이드 수 | 10장 |
+| 파일 크기 | 220KB |
+| 발표 시간 | 10분 |
+| Visual QA 점수 | **88점 (PASS)** |
+| 디자인 시스템 | Dark Sophistication (Gemini Style) |
+
+### 9.3 슬라이드 구성
+
+| # | 제목 | 핵심 내용 |
+|---|------|----------|
+| 1 | Title | OpenClaw: 오픈소스 AI 에이전트의 부상 |
+| 2 | Executive Summary | 4가지 핵심 포인트 (성장, 접근, 위험, 전환) |
+| 3 | What is OpenClaw | 정의 + 명칭 변천사 (Clawdbot→Moltbot→OpenClaw) |
+| 4 | Core Features | 멀티채널, 시스템 제어, 메모리, 스킬 시스템 |
+| 5 | Explosive Growth | 145K+ GitHub Stars, 2개월 역대급 성장 |
+| 6 | Moltbook | AI 에이전트 전용 소셜 네트워크 |
+| 7 | Security Concerns | 치명적 삼중고, 26% 스킬 취약점 |
+| 8 | Competitive Landscape | OpenClaw vs Claude Code 비교 |
+| 9 | Enterprise Implications | 기업 도입 시사점, 권장 사항 |
+| 10 | Conclusion | AI 에이전트 시대의 시작, Next Step |
+
+### 9.4 Visual QA 상세 결과
+
+| 평가 항목 | 배점 | 획득 점수 |
+|----------|------|----------|
+| 시각적 계층 | 25 | 23 |
+| 색상 조화 | 20 | 18 |
+| 레이아웃 균형 | 20 | 17 |
+| 타이포그래피 | 20 | 17 |
+| 전문성/완성도 | 15 | 13 |
+| **총점** | **100** | **88** |
+
+### 9.5 핵심 인사이트 (AI 프로덕트 리더 관점)
+
+1. **OpenClaw = 선행 지표**: AI 에이전트의 가능성과 위험을 동시에 보여줌
+2. **보안 vs 자율성**: 엔터프라이즈 도입의 핵심 과제
+3. **2026년**: AI 에이전트 폭발의 해, 5년 내 웹 브라우저 수준 보편화 전망
+4. **권장 전략**: "관찰하고 학습"하면서 내부 역량 구축
+
+### 9.6 리서치 출처
+
+- [OpenClaw Official](https://openclaw.ai/)
+- [GitHub - openclaw/openclaw](https://github.com/openclaw/openclaw)
+- [CNBC: From Clawdbot to OpenClaw](https://www.cnbc.com/2026/02/02/openclaw-open-source-ai-agent-rise-controversy-clawdbot-moltbot-moltbook.html)
+- [Wikipedia: OpenClaw](https://en.wikipedia.org/wiki/OpenClaw)
+- [Fast Company: OpenClaw Security](https://www.fastcompany.com/91485326/openclaw-is-a-major-leap-forward-for-ai-and-a-cybersecurity-nightmare)
+
+---
+
+## 10. 로드맵
 
 ### v2.0 (현재)
 - ✅ Research Agent v2 (다층 리서치)
 - ✅ Design Skill v2 (Gemini 스타일)
 - ✅ Visual QA Agent (시각적 검증)
 - ✅ Thumbnail Preview Skill
+- ✅ OpenClaw 분석 사례 연구
 
 ### v2.1 (계획)
 - [ ] A/B Design Agent (버전 비교)
@@ -358,7 +438,7 @@ output/
 
 ---
 
-## 10. 참고 자료
+## 11. 참고 자료
 
 ### 외부 참조
 - [Anthropic Skills - Frontend Design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)

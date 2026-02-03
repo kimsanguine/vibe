@@ -55,8 +55,9 @@ ppt-agent-team/
 │   └── ppt_workflow.md              # 전체 워크플로우 (5단계)
 │
 ├── output/                          # 출력물
-│   └── ai-trends-2026/              # 테스트 프리젠테이션
-│       └── v2/
+│   ├── ai-trends-2026/              # 예시 1: AI 트렌드
+│   │   └── v2/
+│   └── openclaw-analysis/           # 예시 2: OpenClaw 분석 ⭐
 │
 ├── PRD.md                           # 제품 요구사항 문서
 └── README.md                        # 이 파일
@@ -255,28 +256,47 @@ Visual QA → Design Skill → PPTX 재생성 → 재평가 (최대 3회)
 
 ## 사용 예시
 
-### 기본 요청
+### 예시 1: AI 트렌드 프리젠테이션
 
 ```
 "AI 트렌드에 대한 15분 프리젠테이션을 만들어줘.
  청중은 기업 임원들이고, 투자 결정에 참고할 내용으로 구성해줘."
 ```
 
-### 출력물
+### 예시 2: OpenClaw 분석 (실제 사례) ⭐
+
+```
+"OpenClaw에 대한 분석과 인사이트를 10분 프리젠테이션으로 만들어줘.
+ 청중은 AI 관심사가 높은 임원들이고, 20년 이상의 AI 프로덕트 리더로서 작성해줘"
+```
+
+**결과**: 10슬라이드, 220KB, Visual QA **88점 PASS**
+
+| 슬라이드 | 내용 |
+|----------|------|
+| 1-2 | Title, Executive Summary |
+| 3-5 | What is OpenClaw, Features, Growth (145K stars) |
+| 6-7 | Moltbook, Security Concerns (치명적 삼중고) |
+| 8-10 | Competition, Enterprise, Conclusion |
+
+### 출력물 구조
 
 ```
 output/
-├── presentation.pptx        # 최종 프리젠테이션
-├── slides/
-│   ├── slide-1.png          # 슬라이드 이미지
-│   ├── slide-2.png
-│   └── ...
-├── thumbnail_grid.png       # 전체 조감 이미지
-├── assets/                  # 사용된 시각 자료
-├── research_report.md       # 리서치 보고서
-├── visual_qa_report.md      # 시각적 평가 보고서
-├── speaker_notes.md         # 발표자 노트
-└── sources.md               # 참고 자료
+├── ai-trends-2026/               # 예시 1
+│   └── v2/
+│       └── AI_Trends_2026_v2.pptx
+│
+├── openclaw-analysis/            # 예시 2 ⭐
+│   ├── OpenClaw_Analysis.pptx    # 10슬라이드 (220KB)
+│   ├── research_report.md        # 리서치 보고서
+│   ├── visual_qa_report.md       # 88점 PASS
+│   └── generate-pptx.js          # 생성 스크립트
+│
+└── [your-project]/               # 새 프로젝트
+    ├── presentation.pptx
+    ├── research_report.md
+    └── visual_qa_report.md
 ```
 
 ---
