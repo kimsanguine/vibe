@@ -116,13 +116,35 @@ YouTube 자막, 웹문서 본문, 또는 텍스트 콘텐츠를 제공하면 자
 
 ### YouTube 자막 가져오는 방법
 
-1. YouTube 영상 페이지에서 `...` 클릭
-2. `스크립트 열기` 또는 `Open transcript` 클릭
-3. 전체 선택 후 복사
+**방법 1: YouTube 내장 기능 (권장)**
+```
+1. YouTube 영상 페이지 열기
+2. 영상 아래 "...더보기" 클릭
+3. "스크립트 표시" 또는 "Show transcript" 클릭
+4. 오른쪽에 자막 패널 열림
+5. 자막 패널에서 "..." → "Toggle timestamps" 클릭 (타임스탬프 제거)
+6. Ctrl+A (전체 선택) → Ctrl+C (복사)
+7. Claude Code에 붙여넣기
+```
 
-또는 자막 다운로드 사이트 사용:
-- downsub.com
+**방법 2: 자막 다운로드 사이트**
+```
+1. https://downsub.com 접속
+2. YouTube URL 붙여넣기
+3. 언어 선택 후 "Download" 클릭
+4. TXT 파일 다운로드
+5. 파일 내용 복사하여 붙여넣기
+```
+
+**추천 자막 다운로드 사이트:**
+- downsub.com (가장 안정적)
 - savesubs.com
+- youtubetranscript.com
+- kome.ai (AI 요약 포함)
+
+**방법 3: 브라우저 확장 프로그램**
+- YouTube Summary with ChatGPT (Chrome)
+- Glasp (Chrome/Safari)
 
 ### 웹문서 본문 가져오는 방법
 
