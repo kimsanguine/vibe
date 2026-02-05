@@ -6,6 +6,25 @@ from pathlib import Path
 from typing import Literal
 
 
+# ── .env 파일 로드 ────────────────────────────────────────────
+def _load_dotenv() -> None:
+    """프로젝트 루트의 .env 파일에서 환경변수를 로드한다."""
+    env_path = Path(__file__).resolve().parent.parent.parent / ".env"
+    if not env_path.exists():
+        return
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key, value = key.strip(), value.strip()
+            if not os.environ.get(key):
+                os.environ[key] = value
+
+
+_load_dotenv()
+
 # ── 프로젝트 경로 ──────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 ASSETS_DIR = PROJECT_ROOT / "assets"

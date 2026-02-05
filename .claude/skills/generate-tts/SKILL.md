@@ -9,7 +9,7 @@ allowed-tools:
 
 # Generate TTS
 
-Gemini TTS 모델을 사용해 한국어 텍스트를 자연스러운 여성 보이스로 변환합니다.
+Gemini 2.5 Pro TTS 모델을 사용해 한국어 텍스트를 자연스러운 여성 보이스로 변환합니다.
 
 ## Instructions
 
