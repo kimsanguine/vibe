@@ -1,10 +1,7 @@
 """Whisper 타임스탬프 추출 + SRT 자막 생성 모듈."""
 
-import json
 from datetime import timedelta
 from pathlib import Path
-
-import whisper
 
 from .config import Config, OUTPUT_SUBTITLES
 
@@ -20,6 +17,7 @@ class SubtitleSync:
     def model(self):
         """Whisper 모델을 lazy-load 한다."""
         if self._model is None:
+            import whisper
             print(f"[SubtitleSync] Loading Whisper {self.config.whisper_model}...")
             self._model = whisper.load_model(self.config.whisper_model)
         return self._model

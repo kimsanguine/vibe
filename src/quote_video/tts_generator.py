@@ -3,9 +3,6 @@
 import wave
 from pathlib import Path
 
-from google import genai
-from google.genai import types
-
 from .config import Config, TTS_VOICES, TTSVoice, OUTPUT_AUDIO
 
 
@@ -14,7 +11,15 @@ class TTSGenerator:
 
     def __init__(self, config: Config | None = None):
         self.config = config or Config()
-        self.client = genai.Client(api_key=self.config.gemini_api_key)
+        self._client = None
+
+    @property
+    def client(self):
+        """Gemini 클라이언트를 lazy-load 한다."""
+        if self._client is None:
+            from google import genai
+            self._client = genai.Client(api_key=self.config.gemini_api_key)
+        return self._client
 
     def generate(
         self,
@@ -51,6 +56,8 @@ class TTSGenerator:
             output_path.parent.mkdir(parents=True, exist_ok=True)
 
         # Gemini TTS 요청
+        from google.genai import types
+
         response = self.client.models.generate_content(
             model=self.config.tts_model,
             contents=text,

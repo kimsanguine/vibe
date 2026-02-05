@@ -1,11 +1,6 @@
 """Gemini 3 Pro 이미지 생성 모듈."""
 
-import base64
-import json
 from pathlib import Path
-
-from google import genai
-from google.genai import types
 
 from .config import Config, IMAGE_STYLES, OUTPUT_IMAGES
 
@@ -15,7 +10,15 @@ class ImageGenerator:
 
     def __init__(self, config: Config | None = None):
         self.config = config or Config()
-        self.client = genai.Client(api_key=self.config.gemini_api_key)
+        self._client = None
+
+    @property
+    def client(self):
+        """Gemini 클라이언트를 lazy-load 한다."""
+        if self._client is None:
+            from google import genai
+            self._client = genai.Client(api_key=self.config.gemini_api_key)
+        return self._client
 
     def generate(
         self,
@@ -56,6 +59,8 @@ class ImageGenerator:
             output_path.parent.mkdir(parents=True, exist_ok=True)
 
         # Gemini 이미지 생성 요청
+        from google.genai import types
+
         response = self.client.models.generate_content(
             model=self.config.image_model,
             contents=full_prompt,
