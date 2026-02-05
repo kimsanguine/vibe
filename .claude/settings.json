@@ -1,0 +1,12 @@
+{
+  "skills": [
+    ".claude/skills/generate-image",
+    ".claude/skills/generate-tts",
+    ".claude/skills/generate-subtitle",
+    ".claude/skills/compose-video"
+  ],
+  "agents": [
+    ".claude/agents/video-orchestrator.md",
+    ".claude/agents/quote-writer.md"
+  ]
+}
