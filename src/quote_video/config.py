@@ -30,7 +30,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 ASSETS_DIR = PROJECT_ROOT / "assets"
 OUTPUT_DIR = PROJECT_ROOT / "output"
 
-FONT_PATH = ASSETS_DIR / "font" / "KOTRA_SONGEULSSI.ttf"
+FONT_PATH = ASSETS_DIR / "font" / "KOTRA_SONGEULSSI.otf"
 BGM_DIR = ASSETS_DIR / "bgm"
 
 OUTPUT_IMAGES = OUTPUT_DIR / "images"
