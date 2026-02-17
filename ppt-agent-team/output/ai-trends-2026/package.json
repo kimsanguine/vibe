@@ -1,0 +1,10 @@
+{
+  "name": "ai-trends-2026-ppt",
+  "version": "1.0.0",
+  "description": "AI Trends 2026 Presentation Generator",
+  "main": "generate-pptx.js",
+  "type": "module",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
